@@ -1,0 +1,81 @@
+<style>
+    .button-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .box {
+        border-top: 3px solid black;
+        border-bottom: none;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .section {
+        display: none;
+        padding: 20px;
+    }
+
+    .section.active {
+        display: block;
+    }
+
+    /* Set background colors for each section */
+    #home { background-color: lightblue; }
+    #gallery { background-color: lightgreen; }
+    #profile { background-color: lightpink; }
+    #game { background-color: lightyellow; }
+
+    /* Set corresponding background colors for buttons */
+    #home-button { background-color: lightblue; }
+    #gallery-button { background-color: lightgreen; }
+    #profile-button { background-color: lightpink; }
+    #game-button { background-color: lightyellow; }
+</style>
+
+<div class="button-container">
+    <div class="box" id="home-button" onclick="showSection('home')">HOME</div>
+    <div class="box" id="gallery-button" onclick="showSection('gallery')">GALLERY</div>
+    <div class="box" id="profile-button" onclick="showSection('profile')">PROFILE</div>
+    <div class="box" id="game-button" onclick="showSection('game')">GAME</div>
+</div>
+
+<div class="section" id="home">
+    <h2>HOME</h2>
+    <p>This is the HOME section. You can add text, images, or anything you want here.</p>
+</div>
+
+<div class="section" id="gallery">
+    <h2>GALLERY</h2>
+    <p>This is the GALLERY section. You can add pictures or any content specific to the gallery here.</p>
+</div>
+
+<div class="section" id="profile">
+    <h2>PROFILE</h2>
+    <p>This is the PROFILE section. You can add information about profiles or users here.</p>
+</div>
+
+<div class="section" id="game">
+    <h2>GAME</h2>
+    <p>This is the GAME section. You can add game-related content here.</p>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        var sections = document.querySelectorAll('.section');
+        sections.forEach(function(section) {
+            section.classList.remove('active');
+        });
+
+        // Show the selected section
+        var sectionToShow = document.getElementById(sectionId);
+        sectionToShow.classList.add('active');
+    }
+</script>
