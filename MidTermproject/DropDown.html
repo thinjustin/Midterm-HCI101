@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title>Drop Down</title>
+    </head>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url('C:\\Users\\Den Drei Lacsina\\Desktop\\HTML\\MidTermproject\\psau PIC.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif;
+        }
+        .menu-bar{
+           background: #952323; 
+           text-align: center;
+        }
+        .menu-bar ul{
+            display: inline-flex;
+            list-style: none;
+            color: white;
+        }
+        .menu-bar ul li{
+            width: 120px;
+            margin: 15px;
+            padding: 15px;
+        }
+        .menu-bar ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .active, .menu-bar ul li:hover {
+            background-color: #A73121;
+            border-radius: 3px;
+        }
+        .sub-menu-1{
+            display: none;
+        }
+        .menu-bar ul li:hover .sub-menu-1{
+            display: block;
+            position: absolute;
+            background-color: #A73121;
+            margin-top: 15px;
+            margin-left: -15px;
+        }
+        .menu-bar ul li:hover .sub-menu-1 ul{
+            display: block;
+            margin: 10px;
+        }
+        .menu-bar ul li:hover .sub-menu-1 ul li{
+            width: 150px;
+            padding: 10px;
+            border-bottom: 1px dotted #fff;
+            background: transparent;
+            border-radius: 0;
+            text-align: left;
+        }
+        .menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+            border-bottom: none;
+        }
+        .menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+            color: #C51605;
+        }
+        .sub-menu-2{
+            display: none;
+        }
+        .hover-me:hover .sub-menu-2{
+            position: absolute;
+            display: block;
+            margin-top: -40px;
+            margin-left: 140px;
+            background: #A73121;
+        }
+
+
+    </style>
+    <body>
+        <div class="menu-bar">
+        <ul>
+            <li class="active"><a href="#">Home</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">More info</a></li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="#">Gallery</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Hover</a></li>
+                    </ul>
+                </div></li>
+            <li><a href="#">Profile</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li class="hover-me"><a href="#">Group Member</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="#">Add Member Name</a></li>
+                                <li><a href="#">Add Member Name</a></li>
+                                <li><a href="#">Add Member Name</a></li>
+                                <li><a href="#">Add Member Name</a></li>
+                            </ul>
+                        </div>
+                         </li>
+                        <li class="hover-me"><a href="#">Contract</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Add Member Name</a></li>
+                                    <li><a href="#">Add Member Name</a></li>
+                                    <li><a href="#">Add Member Name</a></li>
+                                    <li><a href="#">Add Member Name</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">More info</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Add Member Name</a></li>
+                                    <li><a href="#">Add Member Name</a></li>
+                                    <li><a href="#">Add Member Name</a></li>
+                                    <li><a href="#">Add Member Name</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Game</a>
+                <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Add Game Link Here</a></li>
+                </ul>
+            </div>
+        </li>
+        </ul>
+        </div>
+    </body>
+</html>
