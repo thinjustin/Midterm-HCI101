@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid term</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    </head>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url('coecs.jpg');
+            background-size: cover;
+            background-position: top;
+            font-family: sans-serif;
+        }
+        .menu-bar {
+        background-color: red; /* Blue with 0% transparency (completely transparent) */
+        text-align: center;
+        }
+        .menu-bar ul{
+            display: inline-flex;
+            list-style: none;
+            color: white;
+        }
+        .menu-bar ul li{
+            width: 120px;
+            margin: 1px;
+            padding: 15px;
+        }
+        .menu-bar ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .active, .menu-bar ul li:hover {
+            background-color: red;
+            border-radius: 3px;
+        }
+        .sub-menu-1{
+            display: none;
+        }
+        .menu-bar ul li:hover .sub-menu-1{
+            display: block;
+            position: absolute;
+            background-color: #952323;
+            margin-top: 15px;
+            margin-left: -15px;
+        }
+        .menu-bar ul li:hover .sub-menu-1 ul{
+            display: block;
+            margin: 10px;
+        }
+        .menu-bar ul li:hover .sub-menu-1 ul li{
+            width: 150px;
+            padding: 10px 15px;
+            border-bottom: 1px solid white;
+            background: transparent;
+            border-radius: 0;
+            text-align: left;
+        }
+        .menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+            border-bottom: none;
+        }
+        .menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+            color: #C51605;
+        }
+        .sub-menu-2{
+            display: none;
+            padding: 7px 15px;
+        }
+        .hover-me:hover .sub-menu-2{
+            position: absolute;
+            display: block;
+            margin-top: -40px;
+            margin-left: 140px;
+            background: #952323;
+            padding: 7px 15px;
+        }
+
+        .section {
+            display: none;
+            padding: 300px;
+            background: green;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        html,
+body {
+  margin: 0;
+}
+
+.banner {
+    background: #009579;
+    position: fixed; /* Set the banner to be fixed */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Make it full width */
+}
+
+
+.banner__content {
+  padding: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.banner__text {
+  flex-grow: 1;
+  line-height: 1.4;
+  font-family: "Quicksand", sans-serif;
+}
+
+.banner__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.banner__text,
+.banner__close > span {
+  color: #ffffff;
+}
+
+.md-active{
+    cursor: pointer;
+}
+
+
+    </style>
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li><sub><i class = "material-icons md-active" onclick="showSection('home')">home</i></sub><a href="#" onclick="showSection('home')">Home</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">More info</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><sub><i class = "material-icons md-active" onclick="showSection('gallery')">image</i></sub><a href="#" onclick="showSection('gallery')">Gallery</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Hover</a></li>
+                    </ul>
+                </div></li>
+            <li><sub><i class = "material-icons md-active" onclick="showSection('profile')">person</i></sub><a href="#" onclick="showSection('profile')">Profile</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li class="hover-me"><a href="#">Group Member</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Luna, Justin James Derrol O.</a></li>
+                                    <li><a href="#">Lacsina, Dan Drei</a></li>
+                                    <li><a href="#">Miranda, Arman Kyle</a></li>
+                                    <li><a href="#">Miranda, Bairra</a></li>
+                                    <li><a href="#">Razon, James</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">Contact</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Luna, Justin James Derrol O.</a></li>
+                                    <li><a href="#">Lacsina, Dan Drei</a></li>
+                                    <li><a href="#">Miranda, Arman Kyle</a></li>
+                                    <li><a href="#">Miranda, Bairra</a></li>
+                                    <li><a href="#">Razon, James</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">More info</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Luna, Justin James Derrol O.</a></li>
+                                    <li><a href="#">Lacsina, Dan Drei</a></li>
+                                    <li><a href="#">Miranda, Arman Kyle</a></li>
+                                    <li><a href="#">Miranda, Bairra</a></li>
+                                    <li><a href="#">Razon, James</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><sub><i class = "material-icons md-active"onclick="showSection('game')">games</i></sub><a href="#" onclick="showSection('game')">Game</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Add Game Link Here</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section" id="home">
+        <h2>HOME</h2>
+        <p>This is the HOME section. You can add text, images, or anything you want here.</p>
+    </div>
+    <div class="section" id="gallery">
+        <h2>GALLERY</h2>
+        <p>This is the GALLERY section. You can add pictures or any content specific to the gallery here.</p>
+    </div>
+    <div class="section" id="profile">
+        <h2>PROFILE</h2>
+        <p>This is the PROFILE section. You can add information about profiles or users here.</p>
+    </div>
+    <div class="section" id="game">
+        <h2>GAME</h2>
+        <p>This is the GAME section. You can add game-related content here.</p>
+    </div>
+
+    <div class="banner">
+        <div class="banner__content">
+          <div class="banner__text">
+            <marquee> <strong>Made by:</strong> HCI GROUP 1! :) </marquee>
+          </div>
+          <button class="banner__close" type="button">
+            <span class="material-icons">
+              close
+            </span>
+          </button>
+        </div>
+      </div>
+
+      
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            var sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.add('active');
+        }
+
+        document.querySelector(".banner__close").addEventListener("click", function () {
+    this.closest(".banner").style.display = "none";
+  });
+    </script>
+</body>
+</html>
