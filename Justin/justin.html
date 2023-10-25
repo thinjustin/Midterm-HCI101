@@ -134,9 +134,41 @@ body {
     cursor: pointer;
 }
 
+.firstsection {
+			background-color: #c56060dc;
+			height: 400px;
+		}
+
+		.secondsection {
+			background-color: #b96060;
+			height: 400px;
+		}
+		.thirdsection {
+			background-color: hsl(0, 45%, 44%);
+			height: 400px;
+		}
+		.fourthsection {
+			background-color: hsla(0, 64%, 27%, 0.863);
+			height: 400px;
+		}
+		.fifthsection {
+			background-color: hwb(0 7% 67% / 0.863);
+			height: 400px;
+        }
+       
+            .thumbnail img {
+			width: 250px;
+			border: 5px solid black;
+			border-radius: 26px;
+			margin-top: 19px;
+            float: right;
+		}
+
 
     </style>
 <body>
+
+    <!--Drei's code-->
     <div class="menu-bar">
         <ul>
             <li><sub><i class = "material-icons md-active" onclick="showSection('home')">home</i></sub><a href="#" onclick="showSection('home')">Home</a>
@@ -159,7 +191,7 @@ body {
                         <li class="hover-me"><a href="#">Group Member</a>
                             <div class="sub-menu-2">
                                 <ul>
-                                    <li><a href="#">Luna, Justin James Derrol O.</a></li>
+                                    <li><a href="#" onclick="showSection('hey1')">Luna, Justin James Derrol O.</a></li>
                                     <li><a href="#">Lacsina, Dan Drei</a></li>
                                     <li><a href="#">Miranda, Arman Kyle</a></li>
                                     <li><a href="#">Miranda, Bairra</a></li>
@@ -213,6 +245,103 @@ body {
     <div class="section" id="profile">
         <h2>PROFILE</h2>
         <p>This is the PROFILE section. You can add information about profiles or users here.</p>
+
+
+        <!--Arman's code-->
+        <section class="firstsection">
+            <div class="box-main">
+                <div class="firstHalf">
+                    <h1 class="text-big" id="web">Justin Luna</h1>
+                    <p class="text-small">
+                        "I'm a diligent first-year working student pursuing a 
+                        Bachelor of Science in Information Technology (BSIT) at PSAU. 
+                        Balancing work and studies, I'm committed to honing my tech 
+                        skills while gaining practical experience in the real world.
+                    </p>
+    
+                </div>
+                </div>
+                <div class="thumbnail" id = "hey1">
+                    <img src="Luna.jpg" alt="Justin Luna">
+                </div>
+        </section>
+    
+        <section class="secondsection">
+            <div class="box-main">
+                <div class="firstHalf">
+                    <h1 class="text-big" id="program">
+                        Den Drei Lacsina
+                    </h1>
+                    <p class="text-small">
+                        "Bat di nalang ako pinanganak na mayaman" 
+    Currently taking his program in Bachelor of Science in Information Technology, in Pampanga State Agricultural University.
+    Valued by Honor and Excellence for the future.
+                    </p>
+    
+                </div>
+                </div>
+                <div class="thumbnail">
+                    <img src="DENDREI.jpg" alt="Lacsina Den Drei"> 
+            </div>
+        </section>
+    
+        <section class="thirdsection">
+            <div class="box-main">
+                <div class="firstHalf">
+                <h1 class="sectionTag text-big">Bairra Miranda</h1>
+    
+                <p class="sectionSubTag text-small">
+                    Hi, I'm Bairra T. Miranda , a passionate and dedicated IT 
+                    student with a keen interest in all things tech. Currently 
+                    pursuing a Bachelor of Science in Information Technology 
+                    at Pampanga State Agricultural University, my journey in 
+                    IT has led me to develop strong programming skills.
+                </p>
+    
+            </div>
+            </div>
+    
+            <div class="thumbnail">
+                <img src= "BR.jpg" alt="Bairra T. Miranda">
+            </div>
+        </section>
+    
+        <section class="fourthsection">
+            <div class="box-main">
+                <div class="firstHalf">
+                    <h1 class="text-big" id="web">Arman Kyle Miranda</h1>
+                    <p class="text-small">
+                        "Di sure kung tama kinuha ng curso" First year student 
+                        of Bachelor of Science Information Technology 
+                        in BSIT-1D at Pampanga State Agricultural University.
+                        And I still have a lot to learn in the future.
+    
+                    </p>
+                </div>
+                </div>
+                <div class="thumbnail">
+                    <img src= "ARMAN.jpg" alt="Arman kyle Miranda">
+                </div>
+        </section>
+        <section class="fifthsection">
+            <div class="box-main">
+                <div class="firstHalf">
+                <h1 class="sectionTag text-big">James Razon</h1>
+    
+                <p class="sectionSubTag text-small">
+                    I am James D. Razon, pursuing a Bachelor of Science in Information Technology. 
+                    I am a hard-working and driven individual who isn't afraid to face a challenge 
+                    in studying our technology and is willing to learn more about it.
+                </p>
+    
+            </div>
+            </div>
+    
+            <div class="thumbnail">
+                <img src= "JR.jpg" alt="James D. Razon">
+            </div>
+        </section>
+
     </div>
     <div class="section" id="game">
         <h2>GAME</h2>
@@ -247,7 +376,7 @@ body {
         }
 
         document.querySelector(".banner__close").addEventListener("click", function () {
-    this.closest(".banner").style.display = "none";
+        this.closest(".banner").style.display = "none";
   });
     </script>
 </body>
