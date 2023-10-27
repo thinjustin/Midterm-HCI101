@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>My Simple Web Development Template</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+
+		.background {
+			background: black;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: center;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 180px;
+			border-radius: 50px;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding: 26px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: grey;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		#search {
+			padding: 5px;
+			font-size: 17px;
+			border: 2px solid grey;
+			border-radius: 9px;
+		}
+
+		.firstsection {
+			background-color: #c56060dc;
+			height: 400px;
+		}
+
+		.secondsection {
+			background-color: #b96060;
+			height: 400px;
+		}
+		.thirdsection {
+			background-color: hsl(0, 45%, 44%);
+			height: 400px;
+		}
+		.fourthsection {
+			background-color: hsla(0, 64%, 27%, 0.863);
+			height: 400px;
+		}
+		.fifthsection {
+			background-color: hwb(0 7% 67% / 0.863);
+			height: 400px;
+		}
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: black;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 150px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+
+		.text-small {
+			font-size: 18px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.section {
+			height: 400px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 90%;
+			margin: auto;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.thumbnail img {
+			width: 250px;
+			border: 5px solid #cba8a8;
+			border-radius: 26px;
+			margin-top: 19px;
+			box-shadow: black;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+
+		.sudo-container {
+		position: relative;
+		width: 600px; /* Adjust the width to match your image dimensions */
+		height: 400px; /* Adjust the height to match your image dimensions */
+		margin: 50px;
+		}
+
+		.sudo {
+		width: 100%;
+		height: 100%;
+		background-image: url("james.jpg");
+		background-size: cover; /* Scale the background image to cover the entire element */
+		}
+
+		.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url("sadako.jpg");
+		background-size: cover; /* Scale the background image to cover the entire element */
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out; /* Add a fade effect transition */
+		}
+
+		.sudo-container:hover .overlay {
+		opacity: 1;
+		}
+
+		a {
+			color: black;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				
+			</div>
+			<li><a href="#web"> Justin Luna</a></li>
+			<li><a href="#program"> Den drei Lacsina</a></li>
+			<li><a href="#course"> Bairra Miranda</a></li>
+			<li><a href="#edge"> Arman Kyle Miranda</a></li>
+			<li><a href="#source"> James Razon</a></li>
+		</ul>
+
+		<div class="rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-sm">Search</button>
+		</div>
+	</nav>
+
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="web">Justin Luna</h1>
+				<p class="text-small">
+					"I'm a diligent first-year working student pursuing a 
+					Bachelor of Science in Information Technology (BSIT) at PSAU. 
+					Balancing work and studies, I'm committed to honing my tech 
+					skills while gaining practical experience in the real world.
+				</p>
+<pre>
+				
+	
+<a href="https://www.facebook.com/ThInjustin?mibextid=ZbWKwL">About Justin</a>
+</pre>
+			</div>
+			<div class="thumbnail">
+				<img src="Luna.jpg" alt="Justin Luna" width="auto" height="auto">
+		</div>
+	</section>
+
+	<section class="secondsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="program">
+					Den Drei Lacsina
+				</h1>
+				<p class="text-small">
+					"Bat di nalang ako pinanganak na mayaman" 
+Currently taking his program in Bachelor of Science in Information Technology, in Pampanga State Agricultural University.
+Valued by Honor and Excellence for the future.
+				</p>
+<pre>
+				
+	
+<a href="https://www.facebook.com/dendrei.lacsina.1/about">About Den Drei</a>
+</pre>
+			</div>
+			<div class="thumbnail">
+				<img src="DENDREI.jpg" alt="Lacsina Den Drei" width="auto" height="auto"> 
+		</div>
+	</section>
+
+	<section class="thirdsection">
+		<div class="box-main">
+			<div class="firstHalf">
+			<h1 class="sectionTag text-big">Bairra Miranda</h1>
+
+			<p class="sectionSubTag text-small">
+				Hi, I'm Bairra T. Miranda , a passionate and dedicated IT 
+				student with a keen interest in all things tech. Currently 
+				pursuing a Bachelor of Science in Information Technology 
+				at Pampanga State Agricultural University, my journey in 
+				IT has led me to develop strong programming skills.
+			</p>
+<pre>
+				
+	
+<a href="">About Bairra</a>
+</pre>
+		</div>
+
+		<div class="thumbnail">
+			<img src= "BR.jpg" alt="Bairra T. Miranda" width="300" width="300">
+		</div>
+	</section>
+
+	<section class="fourthsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="web">Arman Kyle Miranda</h1>
+				<p class="text-small">
+					"Di sure kung tama kinuha ng curso" First year student 
+					of Bachelor of Science Information Technology 
+					in BSIT-1D at Pampanga State Agricultural University.
+					And I still have a lot to learn in the future.
+
+				</p>
+<pre>
+				
+	
+<a href="https://www.facebook.com/Armankyle.miranda.336?mibextid=ZbWKwL">About Arman</a>
+</pre>
+			</div>
+			<div class="thumbnail">
+				<img src= "kyle2022.jpg" alt="Arman kyle Miranda" width="auto" height="auto">
+			</div>
+	</section>
+	<section class="fifthsection">
+		<div class="box-main">
+			<div class="firstHalf">
+			<h1 class="sectionTag text-big">James Razon</h1>
+
+			<p class="sectionSubTag text-small">
+				I am James D. Razon, pursuing a Bachelor of Science in Information Technology. 
+				I am a hard-working and driven individual who isn't afraid to face a challenge 
+				in studying our technology and is willing to learn more about it.
+			</p>
+<pre>
+				
+	
+<a href="https://www.facebook.com/james.razon2?mibextid=ZbWKwL">About James</a>
+</pre>
+		</div>
+
+		<div class="thumbnail">
+			<img src= "JR.jpg" alt="James D. Razon" width="auto" height="auto">
+		</div>
+	</section>
+
+	<footer class="background">
+		<p class="text-footer">
+			Copyright ©-All rights are reserved
+		</p>
+
+
+	</footer>
+</body>
+
+</html>
